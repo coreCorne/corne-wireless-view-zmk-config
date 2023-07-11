@@ -8,28 +8,37 @@
 
         default_layer {
             bindings = <
-  &kp TAB               &kp Q           &kp W           &kp E  &mt LG(C) R  &mt LG(A) T             &kp Y            &kp U       &kp I       &kp O                &kp P        &kp BSPC
-&kp LSHFT  &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LSHFT F  &mt LG(X) G      &mt RC(UP) H      &mt RSHFT J  &mt RGUI K  &mt RALT L  &mt RCTRL SEMICOLON       &kp ENTER
-&kp LG(S)               &kp Z           &kp X           &kp C  &mt LG(V) V        &kp B    &mt RC(LEFT) N  &mt RC(RIGHT) M   &kp COMMA     &kp DOT             &kp FSLH  &kp APOSTROPHE
-                                                        &mo 1     &kp LGUI    &kp SPACE          &kp BSPC            &mo 2       &none
+     &kp TAB  &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y              &kp U      &kp I    &kp O          &kp P        &kp BSPC
+   &kp LSHFT  &kp A  &kp S  &kp D     &kp F      &kp G       &kp H              &kp J      &kp K    &kp L  &kp SEMICOLON       &kp ENTER
+&kp LEFT_ALT  &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N              &kp M  &kp COMMA  &kp DOT       &kp FSLH  &kp APOSTROPHE
+                            &mo 1  &kp LGUI  &kp SPACE    &kp BSPC  &kp RIGHT_CONTROL      &mo 2
             >;
         };
 
         lower_layer {
             bindings = <
-   &kp TAB        &kp N1        &kp N2        &kp N3        &kp N4        &kp N5      &kp N6    &kp N7     &kp N8     &kp N9  &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN     &kp UP  &kp RIGHT  &trans    &trans
- &kp LSHFT        &trans        &trans        &trans        &trans        &trans      &trans    &trans     &trans     &trans  &trans   &kp ESC
-                                              &trans      &kp LGUI     &kp SPACE    &kp BSPC    &trans  &kp ENTER
+       &kp TAB  &kp N1        &kp N2      &kp N3         &kp N4     &kp N5      &kp N6    &kp N7    &kp N8     &kp N9  &kp N0   &kp BSPC
+&kp LEFT_SHIFT   &none         &none  &kp LC(UP)          &none      &none       &none     &none    &kp UP      &none   &none      &none
+        &tog 3   &none  &kp LC(LEFT)       &none  &kp LC(RIGHT)      &none       &none  &kp LEFT  &kp DOWN  &kp RIGHT   &none  &kp ENTER
+                                           &none       &kp LGUI  &kp SPACE    &kp BSPC     &none     &none
             >;
         };
 
         raise_layer {
             bindings = <
   &kp TAB  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
-&kp LCTRL    &trans  &trans    &trans  &kp LG(C)  &kp LG(X)    &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT    &trans  &trans    &trans  &kp LG(V)     &trans    &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                               &trans   &kp LGUI  &kp SPACE     &kp BSPC     &trans        &kp ENTER
+&kp LCTRL     &none   &none     &none  &kp LG(C)  &kp LG(X)    &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT     &none   &none     &none  &kp LG(V)      &none    &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
+                                &none   &kp LGUI  &kp SPACE     &kp BSPC      &none            &none
+            >;
+        };
+
+        bluetooth {
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none    &none  &none  &none  &none  &none  &bt BT_CLR
+       &none         &none         &none         &none         &none  &none    &none  &none  &none  &none  &none       &none
+      &tog 3         &none         &none         &none         &none  &none    &none  &none  &none  &none  &none       &none
+                                                 &none         &none  &none    &none  &none  &none
             >;
         };
     };
