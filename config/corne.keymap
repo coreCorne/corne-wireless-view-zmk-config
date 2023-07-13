@@ -3,24 +3,36 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-       &kp TAB  &kp Q  &kp W  &kp E     &kp R      &kp T       &kp Y              &kp U      &kp I    &kp O          &kp P  &kp UNDERSCORE
-  &kp LEFT_ALT  &kp A  &kp S  &kp D     &kp F      &kp G       &kp H              &kp J      &kp K    &kp L  &kp SEMICOLON       &kp ENTER
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B       &kp N              &kp M  &kp COMMA  &kp DOT       &kp FSLH       &kp MINUS
-                              &mo 1  &kp LGUI  &kp SPACE    &kp BSPC  &kp RIGHT_CONTROL      &mo 2
+      &kp TAB  &kp Q  &kp W  &kp E         &kp R      &kp T       &kp Y              &kp U      &kp I    &kp O          &kp P       &kp MINUS
+&kp BACKSLASH  &kp A  &kp S  &kp D  &bhm LSHIFT F      &kp G       &kp H       &bhm RSHIFT J      &kp K    &kp L  &kp SEMICOLON  &kp APOSTROPHE
+ &kp LEFT_ALT  &kp Z  &kp X  &kp C         &kp V      &kp B       &kp N              &kp M  &kp COMMA  &kp DOT       &kp FSLH       &kp ENTER
+                             &mo 1      &kp LGUI  &kp SPACE    &kp BSPC  &kp RIGHT_CONTROL      &mo 2
             >;
         };
 
         lower_layer {
             bindings = <
-       &kp TAB  &kp N1        &kp N2      &kp N3         &kp N4     &kp N5      &kp N6    &kp N7    &kp N8     &kp N9  &kp N0   &kp BSPC
-&kp LEFT_SHIFT   &none         &none  &kp LC(UP)          &none      &none       &none     &none    &kp UP      &none   &none      &none
-        &tog 3   &none  &kp LC(LEFT)       &none  &kp LC(RIGHT)      &none       &none  &kp LEFT  &kp DOWN  &kp RIGHT   &none  &kp ENTER
-                                           &none       &kp LGUI  &kp SPACE    &kp BSPC     &none     &none
+&kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3   &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6    &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp MINUS  &kp EQUAL
+       &none  &kp LC(LEFT)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LEFT_SHIFT         &none           &none  &kp RIGHT_SHIFT        &kp UP         &none      &none      &none
+      &tog 3         &none             &none          &none           &none         &none           &none         &kp LEFT      &kp DOWN     &kp RIGHT      &none  &kp ENTER
+                                                      &none        &kp LGUI     &kp SPACE        &kp BSPC            &none         &none
             >;
         };
 
