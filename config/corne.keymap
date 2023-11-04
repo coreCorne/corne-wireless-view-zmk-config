@@ -31,8 +31,8 @@
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0  &kp MINUS  &kp EQUAL
 &none         &kp LC(LEFT)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LEFT_SHIFT  &none           &none         &kp RIGHT_SHIFT  &kp LEFT      &kp UP        &kp RIGHT  &none
-&tog 3        &none         &none             &none          &none           &none           &none         &none            &none         &none         &none      &kp ENTER
-                                              &none          &kp LCTRL       &kp SPACE       &kp BSPC      &kp DOWN         &none
+&mo 3         &none         &none             &none          &none           &none           &none         &none            &none         &none         &none      &kp ENTER
+                                              &tog 0         &kp LCTRL       &kp SPACE       &kp BSPC      &kp DOWN         &tog 2
             >;
         };
 
@@ -41,7 +41,7 @@
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &none     &none   &none     &kp LC(C)  &kp LC(X)    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &none     &none   &none     &kp LC(V)  &none        &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &none     &kp LCTRL  &kp SPACE    &kp BSPC   &none      &none
+                             &tog 0    &kp LCTRL  &kp SPACE    &kp BSPC   &none      &tog 1
             >;
         };
 
@@ -49,7 +49,7 @@
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none    &none  &none  &none  &none  &none  &bt BT_CLR
 &none         &none         &none         &none         &none         &none    &none  &none  &none  &none  &none  &none
-&tog 3        &none         &none         &none         &none         &none    &none  &none  &none  &none  &none  &none
+&none         &none         &none         &none         &none         &none    &none  &none  &none  &none  &none  &none
                                           &none         &none         &none    &none  &none  &none
             >;
         };
