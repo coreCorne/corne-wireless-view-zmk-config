@@ -30,7 +30,7 @@
         lower_layer {
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4   &kp NUMBER_5    &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0  &kp MINUS  &kp EQUAL
-&none         &kp LC(LEFT)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LEFT_SHIFT  &none           &none         &kp RIGHT_SHIFT  &kp LEFT      &kp UP        &kp RIGHT  &none
+&none         &kp LG(LEFT)  &kp LG(UP_ARROW)  &kp LG(RIGHT)  &kp LEFT_SHIFT  &none           &none         &kp RIGHT_SHIFT  &kp LEFT      &kp UP        &kp RIGHT  &none
 &mo 3         &none         &none             &none          &none           &none           &none         &none            &none         &none         &none      &kp ENTER
                                               &tog 1         &kp LCTRL       &kp SPACE       &kp BSPC      &kp DOWN         &to 2
             >;
@@ -38,10 +38,10 @@
 
         raise_layer {
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &none     &none   &none     &kp LC(C)  &kp LC(X)    &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &none     &none   &none     &kp LC(V)  &none        &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &to 1     &kp LCTRL  &kp SPACE    &kp BSPC   &none      &tog 2
+&kp TAB    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LCTRL  &kp LC(A)  &kp LC(S)  &none      &kp LC(F)  &none        &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &none        &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+                                 &to 1      &kp LCTRL  &kp SPACE    &kp BSPC   &none      &tog 2
             >;
         };
 
